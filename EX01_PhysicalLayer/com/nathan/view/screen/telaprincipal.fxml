@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1136.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nathan.controller.Controller_TelaPrincipal">
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="214.0" spacing="5.0" styleClass="right-bar" stylesheets="@../styles/paginaPrincipal.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="52.0" prefWidth="194.0">
+               <children>
+                  <Label text="Dispositivo 01">
+                     <font>
+                        <Font name="Cambria Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="194.0" stylesheets="@../styles/paginaPrincipal.css">
+               <children>
+                  <TextField fx:id="txt_men" prefHeight="24.0" prefWidth="128.0" promptText="Digite sua mensagem" styleClass="search-text-input" stylesheets="@../styles/paginaPrincipal.css">
+                     <font>
+                        <Font name="Cambria" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="btn_enviar" mnemonicParsing="false" onAction="#onClick" styleClass="search-button" stylesheets="@../styles/paginaPrincipal.css" text="Enviar" textFill="#fcfcfc" />
+               </children>
+               <styleClass>
+                  <String fx:value="search-box" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </HBox>
+            <Label text="Camadas">
+               <font>
+                  <Font name="Cambria Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <VBox prefHeight="306.0" prefWidth="194.0" spacing="5.0" styleClass="card" stylesheets="@../styles/paginaPrincipal.css">
+               <children>
+                  <HBox fx:id="hboxEmAp" alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="184.0">
+                     <children>
+                        <Label prefHeight="44.0" prefWidth="82.0" text="Aplicacao">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="7.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox fx:id="hboxEmApr">
+                     <children>
+                        <Label disable="true" text="Apresentacao">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="7.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox fx:id="hboxEmSe">
+                     <children>
+                        <Label disable="true" text="Sessao">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="7.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox fx:id="hboxEmTr">
+                     <children>
+                        <Label disable="true" text="Transporte">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="7.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox fx:id="hboxEmRe">
+                     <children>
+                        <Label disable="true" text="Rede">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="7.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox fx:id="hboxEmEn">
+                     <children>
+                        <Label disable="true" text="Enlace de Dados">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="7.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox fx:id="hboxEmFi" alignment="CENTER" prefHeight="52.0" prefWidth="139.0">
+                     <children>
+                        <MenuButton fx:id="menu_cod" mnemonicParsing="false" popupSide="RIGHT" prefHeight="52.0" prefWidth="187.0">
+                          <items>
+                              <CheckMenuItem fx:id="menuItemBinario" mnemonicParsing="false" onAction="#onClick" selected="true" text="Binário" />
+                              <CheckMenuItem fx:id="menuItemManchester" mnemonicParsing="false" onAction="#onClick" text="Manchester" />
+                              <CheckMenuItem fx:id="menuItemManchesterDiferencial" mnemonicParsing="false" onAction="#onClick" text="Manchester Diferencial" />
+                          </items>
+                           <graphic>
+                              <VBox prefHeight="30.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Fisica">
+                                       <font>
+                                          <Font name="Cambria Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl_protocolo" text="Binario" textFill="#948b8b">
+                                       <font>
+                                          <Font name="Cambria" size="12.0" />
+                                       </font></Label>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </MenuButton>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </VBox>
+   </left>
+   <right>
+      <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="214.0" spacing="5.0" styleClass="right-bar" stylesheets="@../styles/paginaPrincipal.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="52.0" prefWidth="194.0">
+               <children>
+                  <Label text="Dispositvo 02">
+                     <font>
+                        <Font name="Cambria Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="194.0" stylesheets="@../styles/paginaPrincipal.css">
+               <children>
+                  <Label fx:id="lbl_men" text="Aguardando Mensagem" textFill="#868686">
+                     <font>
+                        <Font name="Cambria" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="search-box" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </HBox>
+            <Label text="Camadas">
+               <font>
+                  <Font name="Cambria Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <VBox prefHeight="300.0" prefWidth="194.0" spacing="5.0" styleClass="card" stylesheets="@../styles/paginaPrincipal.css">
+               <children>
+                  <HBox fx:id="hboxReAp" alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="184.0">
+                     <children>
+                        <Label prefHeight="44.0" prefWidth="82.0" text="Aplicacao">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="7.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox fx:id="hboxReApr">
+                     <children>
+                        <Label disable="true" text="Apresentacao">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="7.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox fx:id="hboxReSe">
+                     <children>
+                        <Label disable="true" text="Sessao">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="7.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox fx:id="hboxReTr">
+                     <children>
+                        <Label disable="true" text="Transporte">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="7.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox fx:id="hboxReRe">
+                     <children>
+                        <Label disable="true" text="Rede">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="7.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox fx:id="hboxReEn">
+                     <children>
+                        <Label disable="true" text="Enlace de Dados">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="7.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox fx:id="hboxReFi" alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="174.0">
+                     <children>
+                        <Label text="Fisica">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="7.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </VBox>
+
+   </right>
+   <center>
+      <VBox prefHeight="491.0" prefWidth="315.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="504.0" prefWidth="315.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="38.0" prefWidth="709.0" text="REDES I">
+                     <font>
+                        <Font name="Cambria Bold" size="30.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="149.0" prefWidth="285.0" spacing="10.0">
+                     <children>
+                        <TextArea fx:id="txt_disp01" editable="false" prefHeight="150.0" wrapText="true" />
+                        <TextArea fx:id="txt_disp02" editable="false" prefHeight="150.0" wrapText="true" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="15.0" right="15.0" top="120.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label text="Transmissao de dados:">
+                     <VBox.margin>
+                        <Insets left="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="57.0" prefWidth="285.0" stylesheets="@../styles/paginaPrincipal.css" vbarPolicy="NEVER">
+                     <content>
+                        <HBox fx:id="hbox_led" prefHeight="49.0" prefWidth="283.0" stylesheets="@../styles/paginaPrincipal.css" />
+                     </content>
+                     <VBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                     </VBox.margin>
+                  </ScrollPane>
+                  <Label text="Velocidade:">
+                     <VBox.margin>
+                        <Insets left="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Slider fx:id="sld_speed" max="1.0" min="0.01" nodeOrientation="RIGHT_TO_LEFT" value="0.75">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="15.0" right="15.0" />
+                     </VBox.margin>
+                  </Slider>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

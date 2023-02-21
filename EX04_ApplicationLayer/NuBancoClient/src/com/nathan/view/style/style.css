@@ -1,0 +1,43 @@
+.menu-button{
+    -fx-background-radius: 90;
+    -fx-background-color: #F0F1F5;
+    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 2.0, 0.0, 0.0, 2.0);
+}
+
+.menu-button:hover{
+        -fx-background-color: #8001CE;
+        -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+        -fx-text-alignment: center;
+}
+
+
+.menu-button:pressed{
+        -fx-background-color:#AE10C6;
+        -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 1, 0.0 , 0 , 1 );
+}
+
+.tab-pane {
+    -fx-tab-max-height: 0 ;
+}
+.tab-pane .tab-header-area {
+    visibility: hidden ;
+    -fx-padding: -20 0 0 0;
+}
+
+.scroll-pane > .viewport {
+   -fx-background-radius: 30 30 0 0;
+}
+
+.botao-sair  {
+    -fx-background-color: #00000000;
+}
+
+.botao-sair:hover {
+    -fx-background-radius: 90;
+    -fx-background-color: #5b5a5a46;
+}
+
+.botao-sair:pressed {
+    -fx-background-radius: 90;
+    -fx-background-color: #5b5a5a89;
+}

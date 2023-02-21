@@ -1,0 +1,30 @@
+.search-box{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 100;
+}
+
+.search-text-input{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.search-button{
+    -fx-background-color: #828282;
+    -fx-background-radius: 30;
+}
+
+.right-bar{
+    -fx-background-color: #d3d3d3;
+}
+
+.shadow{
+    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 10.0, 0.0, 0.0, 10.0);
+}
+
+.card{
+    -fx-background-radius: 38;
+    -fx-background-color: #FFFFFF;
+}
+
+.menu-button{
+    -fx-background-color: #FFFFFF;
+}
